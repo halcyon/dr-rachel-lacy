@@ -19,6 +19,35 @@
     <script type="text/javascript" src="Scripts/Widgets/GoogleMap/GoogleMap.js"></script>
     <script type="text/javascript" src="Scripts/iWebImage.js"></script>
     <script type="text/javascript" src="Contact_files/Contact.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+
+    <style>
+      #map {
+        width: 450px;
+        height: 400px;
+      }
+    </style>
+    <script>
+      function initMap() {
+        var myLatLng = {lat: 34.018336, lng: -84.137902};
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: myLatLng
+        });
+
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: 'Hello World!'
+        });
+      }
+      google.maps.event.addDomListener(window, 'load', initMap);
+    </script>
+
+
+
   </head>
   <body style="background: rgb(210, 214, 255); margin: 0pt; " onload="onPageLoad();" onunload="onPageUnload();">
     <div style="text-align: center; ">
@@ -68,16 +97,19 @@ new NavBar('widget0', 'Scripts/Widgets/Navbar', 'Scripts/Widgets/SharedResources
         </div>
         <div style="margin-left: 0px; position: relative; width: 719px; z-index: 5; " id="body_layer">
           <div style="height: 0px; line-height: 0px; " class="bumper"> </div>
-          <div class="com-apple-iweb-widget-GoogleMap aboveStrokesAndFrames stroke_0" id="widget1" style="height: 400px; left: 34px; opacity: 1.00; position: absolute; top: 33px; width: 400px; z-index: 1; "></div>
-          <script type="text/javascript"><!--//--><![CDATA[//><!--
-new GoogleMap('widget1', 'Scripts/Widgets/GoogleMap', 'Scripts/Widgets/SharedResources', '.', {"locatedAddressPoint": "33.972623,-84.07886", "showGoogleBar": "1", "showInfo": "1", "locatedAddressIsFromGeocoder": "1", "language": "en", "showZoom": "1", "showMarker": "1", "mapType": "h", "locatedAddress": "1805 Herrington Rd, Lawrenceville, GA 30043, USA", "unlocatedAddress": "", "zoomLevel": "16", "center": "33.973652,-84.078863"});
-//--><!]]></script>
+          <!--<div class="com-apple-iweb-widget-GoogleMap aboveStrokesAndFrames stroke_0" id="widget1" style="height: 400px; left: 34px; opacity: 1.00; position: absolute; top: 33px; width: 400px; z-index: 1; "></div>-->
+          <!--<script type="text/javascript">&lt;!&ndash;//&ndash;&gt;<![CDATA[//>&lt;!&ndash;-->
+<!--new GoogleMap('widget1', 'Scripts/Widgets/GoogleMap', 'Scripts/Widgets/SharedResources', '.', {"locatedAddressPoint": "33.972623,-84.07886", "showGoogleBar": "1", "showInfo": "1", "locatedAddressIsFromGeocoder": "1", "language": "en", "showZoom": "1", "showMarker": "1", "mapType": "h", "locatedAddress": "1805 Herrington Rd, Lawrenceville, GA 30043, USA", "unlocatedAddress": "", "zoomLevel": "16", "center": "33.973652,-84.078863"});-->
+<!--//&ndash;&gt;<!]]></script>-->
           <div id="id2" style="height: 429px; left: 461px; position: absolute; top: 21px; width: 214px; z-index: 1; " class="style_SkipStroke_1 shape-with-text stroke_1">
             <div class="text-content style_External_212_427 vertical-align-middle-middlebox" style="padding: 1px; ">
               <div class="style_1 vertical-align-middle-innerbox">
                 <p style="padding-top: 0pt; " class="paragraph_style_1">RACHEL LACY, PSY.D., P.C.<br /></p>
-                <p class="paragraph_style_1">1805 Herrington Road, Building 2<br /></p>
-                <p class="paragraph_style_1">Lawrenceville, Georgia 30043<br /></p>
+                <p class="paragraph_style_1">
+                  3883 ROGERS BRIDGE ROAD N W
+                  SUITE 302 A
+                  <br /></p>
+                <p class="paragraph_style_1">DULUTH GA 30097<br /></p>
                 <p class="paragraph_style_1">Phone: <span class="style_2">770-722-7827<br /></span></p>
                 <p class="paragraph_style_2">Fax: 770-962-1886<br /></p>
                 <p class="paragraph_style_3"><span class="style_2"><br /></span></p>
@@ -99,31 +131,36 @@ new GoogleMap('widget1', 'Scripts/Widgets/GoogleMap', 'Scripts/Widgets/SharedRes
           
 
 
-          <div id="id3" style="height: 618px; left: 43px; position: absolute; top: 471px; width: 613px; z-index: 1; " class="style_SkipStroke_1 shape-with-text stroke_2">
-            <div class="text-content graphic_textbox_layout_style_default_External_611_616" style="padding: 1px; ">
-              <div class="graphic_textbox_layout_style_default">
-                <p style="padding-top: 0pt; " class="paragraph_style_9"><span class="style_3"><br /></span></p>
-                <p class="paragraph_style_10">Directions to Dr. Lacy’s Office <span class="style_3"><br /></span></p>
-                <p class="paragraph_style_11">From Lawrenceville (far side) <span class="style_3"><br /></span></p>
-                <p class="paragraph_style_12">Take Hwy. 120 going toward Duluth and cross over the bridge of 316, and continue on 120 crossing over Lawrenceville-Suwanee Road. Continue on Hwy. 120 to Atkinson Rd. (This is the next road after Sugarloaf Parkway. LA Fitness and Rite Aid will be on the left) Make a left turn onto Atkinson Rd. Go to the first traffic light and make a right onto Herrington Rd. Get into the left turn lane and make a left into the first parking lot. We are building #2 on the left. <br /></p>
-                <p class="paragraph_style_13">From 85 North <span class="style_3"><br /></span></p>
-                <p class="paragraph_style_14">Take I-85 South to exit 107 Duluth – Lawrenceville Highway / 120 East. This is the Discover Mills Mall exit. Take a left going across the bridge and heading toward Lawrenceville. Go to the third traffic light, Atkinson Rd. (there is a Shell Gas Station on right) and make a right turn onto Atkinson Rd. Go one block to the first traffic light which is Herrington Rd. and make a right turn onto Herrington Rd. and get into the left turn lane. Make a left turn into the first parking lot. We are building #2 on the left. <br /></p>
-                <p class="paragraph_style_15"><br /></p>
-                <p class="paragraph_style_15">From 75 South <span class="style_3"><br /></span></p>
-                <p class="paragraph_style_16">Take 75 South to 285 East to 85 North. Take I-85 North and after passing under Pleasant Hill Road, get into the right hand lane and take exit 105, which says Duluth – Lawrenceville Highway. This is an access ramp that splits again to 316. <span class="style_4">DO NOT TAKE HWY. 316</span>, but stay in the middle lane and then veer to the left and follow the signs for the Duluth-Lawrenceville Hwy, which is the Discover Mills Mall exit. The road splits again and you will stay in the right hand lane so that you are heading toward Lawrenceville when the ramp merges onto Hwy. 120. Go to the third traffic light, Atkinson Rd. (there is a Shell Gas Station on right) and make a right turn onto Atkinson Rd. Go one block to the first traffic light which is Herrington Rd. and make a right turn onto Herrington Rd. and get into the left turn lane. Make a left turn into the first parking lot. We are building #2 on the left. <br /></p>
-                <p class="paragraph_style_16"><br /></p>
-                <p class="paragraph_style_17">From 85 South <span class="style_3"><br /></span></p>
-                <p style="padding-bottom: 0pt; " class="paragraph_style_14">Take I-85 North and after passing under Pleasant Hill Road, get into the right hand lane and take exit 105, which says Duluth – Lawrenceville Highway. This is an access ramp that splits again to 316. <span class="style_4">DO NOT TAKE HWY. 316</span>, but stay in the middle lane and then veer to the left and follow the signs for the Duluth-Lawrenceville Hwy, which is the Discover Mills Mall exit. The road splits again and you will stay in the right hand lane so that you are heading toward Lawrenceville when the ramp merges onto Hwy. 120. Go to the third traffic light, Atkinson Rd. (there is a Shell Gas Station on right) and make a right turn onto Atkinson Rd. Go one block to the first traffic light which is Herrington Rd. and make a right turn onto Herrington Rd. and get into the left turn lane. Make a left turn into the first parking lot. We are building #2 on the left.</p>
-              </div>
-            </div>
-          </div>
+          <!--<div id="id3" style="height: 618px; left: 43px; position: absolute; top: 471px; width: 613px; z-index: 1; " class="style_SkipStroke_1 shape-with-text stroke_2">-->
+            <!--<div class="text-content graphic_textbox_layout_style_default_External_611_616" style="padding: 1px; ">-->
+              <!--<div class="graphic_textbox_layout_style_default">-->
+                <!--<p style="padding-top: 0pt; " class="paragraph_style_9"><span class="style_3"><br /></span></p>-->
+                <!--<p class="paragraph_style_10">Directions to Dr. Lacy’s Office <span class="style_3"><br /></span></p>-->
+                <!--<p class="paragraph_style_11">From Lawrenceville (far side) <span class="style_3"><br /></span></p>-->
+                <!--<p class="paragraph_style_12">Take Hwy. 120 going toward Duluth and cross over the bridge of 316, and continue on 120 crossing over Lawrenceville-Suwanee Road. Continue on Hwy. 120 to Atkinson Rd. (This is the next road after Sugarloaf Parkway. LA Fitness and Rite Aid will be on the left) Make a left turn onto Atkinson Rd. Go to the first traffic light and make a right onto Herrington Rd. Get into the left turn lane and make a left into the first parking lot. We are building #2 on the left. <br /></p>-->
+                <!--<p class="paragraph_style_13">From 85 North <span class="style_3"><br /></span></p>-->
+                <!--<p class="paragraph_style_14">Take I-85 South to exit 107 Duluth – Lawrenceville Highway / 120 East. This is the Discover Mills Mall exit. Take a left going across the bridge and heading toward Lawrenceville. Go to the third traffic light, Atkinson Rd. (there is a Shell Gas Station on right) and make a right turn onto Atkinson Rd. Go one block to the first traffic light which is Herrington Rd. and make a right turn onto Herrington Rd. and get into the left turn lane. Make a left turn into the first parking lot. We are building #2 on the left. <br /></p>-->
+                <!--<p class="paragraph_style_15"><br /></p>-->
+                <!--<p class="paragraph_style_15">From 75 South <span class="style_3"><br /></span></p>-->
+                <!--<p class="paragraph_style_16">Take 75 South to 285 East to 85 North. Take I-85 North and after passing under Pleasant Hill Road, get into the right hand lane and take exit 105, which says Duluth – Lawrenceville Highway. This is an access ramp that splits again to 316. <span class="style_4">DO NOT TAKE HWY. 316</span>, but stay in the middle lane and then veer to the left and follow the signs for the Duluth-Lawrenceville Hwy, which is the Discover Mills Mall exit. The road splits again and you will stay in the right hand lane so that you are heading toward Lawrenceville when the ramp merges onto Hwy. 120. Go to the third traffic light, Atkinson Rd. (there is a Shell Gas Station on right) and make a right turn onto Atkinson Rd. Go one block to the first traffic light which is Herrington Rd. and make a right turn onto Herrington Rd. and get into the left turn lane. Make a left turn into the first parking lot. We are building #2 on the left. <br /></p>-->
+                <!--<p class="paragraph_style_16"><br /></p>-->
+                <!--<p class="paragraph_style_17">From 85 South <span class="style_3"><br /></span></p>-->
+                <!--<p style="padding-bottom: 0pt; " class="paragraph_style_14">Take I-85 North and after passing under Pleasant Hill Road, get into the right hand lane and take exit 105, which says Duluth – Lawrenceville Highway. This is an access ramp that splits again to 316. <span class="style_4">DO NOT TAKE HWY. 316</span>, but stay in the middle lane and then veer to the left and follow the signs for the Duluth-Lawrenceville Hwy, which is the Discover Mills Mall exit. The road splits again and you will stay in the right hand lane so that you are heading toward Lawrenceville when the ramp merges onto Hwy. 120. Go to the third traffic light, Atkinson Rd. (there is a Shell Gas Station on right) and make a right turn onto Atkinson Rd. Go one block to the first traffic light which is Herrington Rd. and make a right turn onto Herrington Rd. and get into the left turn lane. Make a left turn into the first parking lot. We are building #2 on the left.</p>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+          <div id="map"></div>
+
           <div style="height: 1089px; line-height: 1089px; " class="spacer"> </div>
         </div>
         <div style="height: 150px; margin-left: 0px; position: relative; width: 719px; z-index: 15; " id="footer_layer">
           <div style="height: 0px; line-height: 0px; " class="bumper"> </div>
         </div>
       </div>
+
     </div>
+
+
   </body>
 </html>
 
